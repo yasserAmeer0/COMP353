@@ -1,0 +1,71 @@
+<?php
+include '../config.php';
+
+// Fetch family members from the database
+$sql = "SELECT * FROM FamilyMembers";
+$result = $conn->query($sql);
+
+if ($result === FALSE) {
+    die("Error: " . $conn->error);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Family Members</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manage Family Members</h1>
+    <button onclick="window.location.href='add_familymember.php'">Add New Family Member</button>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Telephone Number</th>
+                <th>Email Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $firstName = urlencode($row['firstName']);
+                    $lastName = urlencode($row['lastName']);
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($row['firstName']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['lastName']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['telephoneNum']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['emailAddress']) . "</td>";
+                    echo "<td>
+                            <a href='edit_familymember.php?firstName={$firstName}&lastName={$lastName}'>Edit</a> | 
+                            <a href='delete_familymember.php?firstName={$firstName}&lastName={$lastName}' onclick=\"return confirm('Are you sure you want to delete this family member?');\">Delete</a>
+                          </td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='5'>No family members found</td></tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+    <button onclick="window.location.href='http://localhost/YSCS/index.php'">Back to Main Menu</button>
+</body>
+</html>
