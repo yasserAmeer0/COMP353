@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.top {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px
+}
+
+.add-button {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.add-button button {
+    padding: 10px 20px;
+    background-color: #73BE73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 250px;
+}
+#actions{
+    width:250px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    
+}
+
+.edit-btn {
+    background-color: #add8e6;
+    color: black;
+    margin-left:20px;
+}
+
+.edit-btn:hover {
+    background-color: #9797FF;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ffcccb;
+    color: black;
+}
+
+.delete-btn:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.form-container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    align-items: center; /* Center the content within the form-group */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%; /* Full width within the form-group */
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn, .back-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.back-btn {
+    background-color: #ccc;
+    color: black;
+}
+
+.back-btn:hover {
+    background-color: #bbb;
+}
+

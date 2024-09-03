@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.top {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dateFilter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.dateFilter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dateFilter label {
+    margin: 0;
+    padding-right: 10px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.dateFilter input[type="text"], 
+.dateFilter input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Adjust width as needed */
+}
+
+.dateFilter button {
+    padding: 8px 15px;
+    background-color: #73BE73; /* Green */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dateFilter button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.addButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.addButton button {
+    width: 150px;
+    height: 50px;
+    background-color: #73BE73; /* Green */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px; 
+    transition: background-color 0.3s;
+}
